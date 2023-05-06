@@ -20,5 +20,5 @@ matplotlib - `pip3 install matplotlib`
 7. `python3 main.py`
 
 # Screenshots
-![inOneChannel](https://imgur.com/1fgTLEu)  
-![acrossAllChannels](https://imgur.com/jNChrLU)
+![inOneChannel](https://i.imgur.com/1fgTLEu.png | width=480)
+![acrossAllChannels](https://i.imgur.com/jNChrLU.png | width=480)
