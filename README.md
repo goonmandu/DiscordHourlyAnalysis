@@ -18,3 +18,6 @@ matplotlib - `pip3 install matplotlib`
 5. Wait for DiscordChatExporter to finish.
 6. Choose the timezone to be analyzed with by editing the `TIMEZONE` constant in `constants.py`.
 7. `python3 main.py`
+
+# Screenshots
+![server-wide](https://imgur.com/1wZkFAm)

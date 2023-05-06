@@ -17,16 +17,20 @@ def show_plot_daynight(analysis_scope: str, username: str, userdata: dict[int, i
     fig, ax = plt.subplots()
     ax.bar(hours, msgs)
     x = np.linspace(0, 23, 1000)
-    y_min, y_max = 0, max(msgs)
+    y_min, y_max = 0, max(msgs) * 1.1
+    ax.set_xticks(range(24))
+    ax.set_xticklabels(range(24))
     ax.fill_between(x, y_min, y_max,
                     where=(x >= day_start - transition) & (x <= day_end + transition),
                     facecolor='yellow', alpha=0.1, interpolate=True)
     ax.fill_between(x, y_min, y_max,
                     where=(x < day_start - transition) | (x > day_end + transition),
-                    facecolor='blue', alpha=0.1, interpolate=True)
+                    facecolor='black', alpha=0.1, interpolate=True)
     ax.set_title(f"Messages each hour by {username}\nin {analysis_scope}\nTotal Messages: {total_msgs}")
     ax.set_xlabel(f"Hour ({TIMEZONE})")
     ax.set_ylabel("Messages")
+    for i, v in enumerate(msgs):
+        ax.text(i, v + y_max / 75, f"{str(v)}\n({round(v * 100/total_msgs, 1)}%)", ha='center', fontsize=7)
     plt.show()
 
 
