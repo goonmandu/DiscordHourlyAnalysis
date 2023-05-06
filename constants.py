@@ -3,7 +3,7 @@ import pytz
 import re
 
 JSON_DIRECTORY: str = "data"
-TIMEZONE: str = "US/Eastern"
+TIMEZONE: str = "America/New_York"
 
 
 def iso8601ize(time_string: str):
