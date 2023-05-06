@@ -20,5 +20,6 @@ matplotlib - `pip3 install matplotlib`
 7. `python3 main.py`
 
 # Screenshots
-![inOneChannel](https://i.imgur.com/1fgTLEu.png | width=480)
-![acrossAllChannels](https://i.imgur.com/jNChrLU.png | width=480)
+<img src="https://i.imgur.com/1fgTLEu.png" width="720">
+<br>
+<img src="https://i.imgur.com/jNChrLU.png" width="720">
