@@ -1,4 +1,5 @@
 from analysis import hourly_of_channel, hourly_of_all_channels_in_server
+from pytz import all_timezones
 
 if __name__ == "__main__":
     option: int = int(input("Enter 1 for one-channel analysis, or 2 to analyze all JSON files.\n"))

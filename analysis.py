@@ -2,7 +2,15 @@ import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-from constants import *
+from classes import *
+from constants import JSON_DIRECTORY
+
+
+def hourly_data_of(messages: list[Message]) -> dict[int, int]:
+    hourly: dict[int, int] = {key: 0 for key in range(24)}
+    for msg in messages:
+        hourly[msg.time.hour] += 1
+    return hourly
 
 
 def show_plot_daynight(analysis_scope: str, username: str, date_filter: str, userdata: dict[int, int]):
