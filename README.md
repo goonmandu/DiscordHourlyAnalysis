@@ -16,7 +16,7 @@ matplotlib - `pip3 install matplotlib`
 3. Choose the `data` directory that you made in Step 1 for the export directory.
 4. Choose JSON format.
 5. Wait for DiscordChatExporter to finish.
-6. Choose the timezone to be analyzed with by editing the `TIMEZONE` constant in `constants.py`.
+6. Move the JSON files into a folder made on the root directory of this project.
 7. `python3 main.py`
 
 # Screenshots
