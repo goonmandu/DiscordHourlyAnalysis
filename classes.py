@@ -28,7 +28,10 @@ def is_date_in_range(date, start_date, end_date):
 class Message:
     def __init__(self, message_data):
         self.content: str = message_data["content"]
-        self.author: str = f'{message_data["author"]["name"]}#{message_data["author"]["discriminator"]}'
+        if message_data["author"]["discriminator"] == "0000":
+            self.author: str = message_data["author"]["name"]
+        else:
+            self.author: str = f'{message_data["author"]["name"]}#{message_data["author"]["discriminator"]}'
         self.time: datetime = datetime.fromisoformat(iso8601ize(message_data["timestamp"])) \
                                       .astimezone(pytz.timezone(TIMEZONE))
 

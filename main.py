@@ -1,5 +1,4 @@
 from analysis import hourly_of_channel, hourly_of_all_channels_in_server
-from pytz import all_timezones
 
 if __name__ == "__main__":
     option: int = int(input("Enter 1 for one-channel analysis, or 2 to analyze all JSON files.\n"))
@@ -17,7 +16,8 @@ if __name__ == "__main__":
         user: str = input("Enter the name and discriminator of the person to analyze. (e.g. discordname#2758):\n")
     '''
 
-    user: str = input("Enter the name and discriminator of the person to analyze. (e.g. discordname#2758):\n")
+    user: str = input("Enter the name of the person to analyze.\n"
+                      "If their name uses a discriminator (legacy name), use this format: name#1234\n")
 
     if option == 1:
         channel_id: str = input("Enter the ID of the channel:\n")
